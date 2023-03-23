@@ -7,6 +7,7 @@ Final project for machine learning and data mining
 - Sid Mallareddygari
 
 ## Dataset [[Here](https://www.robots.ox.ac.uk/~vgg/data/pets/)]
+## Project working document [[Here](https://docs.google.com/document/d/1e44iOMHAqkH2ctta_33C5Q0RKm1GWLZg1SSbtU3Vgq4/edit?usp=sharing)]
 
 ## Project summary
 To be able to recognise the pets (between cats and dogs) and their breeds based on the data given.
