@@ -115,6 +115,10 @@ We computed and ran it locally through the Jupyter notebook in the folder. Howev
 ![image](https://user-images.githubusercontent.com/56982656/231656274-449be805-2715-4107-a822-cc9c574262a1.png)
 
 3. One of our parameter choices was to resize all inputs images to (224, 224, 3). We made this choice by looking at other similar models and decided that this image shape seemed to be standard. This also allows a smaller input size, and therefore less parameters which means the models we made were computationally efficient to train and less likely to overfit. We then decided to use the ReLu activation function to introduce some non-linearity in our models so it could handle more complex relationships with data. We determined the filter size of 3x3 in our base CNN model based on what seemed to be standard in other models. We also tried varying the number of filters in each layer to see the impact it would have on our model. The loss function we found most appropriate was the binary cross entropy loss since this was a classification problem with two outcomes.
+4. We additionally, also looked at the training and validation loss and accuracy with the CNN to get the classification on the 37 classes of the breeds.
+
+![image](https://user-images.githubusercontent.com/56982656/231663122-07b644ce-0256-4f4a-8dd4-36c1ae590572.png)
+![image](https://user-images.githubusercontent.com/56982656/231663143-2440a2cf-afbb-462e-8649-e6be5ca15ef9.png)
 
 ### Discussion:
 
@@ -125,11 +129,13 @@ The results of the ensemble model created from three CNNs and the other ensemble
 
 The results of the pretrained model MV2 and Xception model on their own are very good, however, as mentioned before since the ensemble made of these models does very poorly on the testing data, it is likely that these models are overfit and not as accurate as the training and validation accuracy would portray.
 
+The results of the 37 classes of breed prediction was a very difficult problem to solve, especially with the convolutional neural network giving us an accuracy of being in between about 2.5% and about 5%. This makes sense because there are a lot of breeds we could classify into. We additionally tried the classification of the breeds on the pre-trained ResNet model that was trained using the imagenet dataset. The training gave us a similar accuracy of about 3-5%. 
+
 Additionally, we tried to predict the bounding boxes on the cats and dogs images and found that the bounding box prediction decreases its loss significantly throughout the training however, it does not most accurately predict the boxes as there is fairly little training data for the bounding boxes which leads to overfitting and incorrect learning predictions. However, we only trained it using CNN. We believe that training it over a pre-trained model to predict the bounding boxes may be far more efficient and improve the accuracy of the model.
 
 ### Conclusion:
 
-We have tried multiple models, to try to classify whether an input image is of a cat or a dog. Our methods have ranged from simple convolutional neural networks, to an ensemble of CNNs, as well as multiple pre-trained models for image classification. In addition to classifying for the label, we also attempted to work with trimaps of these input images to make bounding boxes for the images to section off the part of the image that is of the face of the cat/dog to make classification further much easier. Upon further fine-tuning of the models, we should be able to find the cat or dog with the bounding boxes, determine whether it is a cat or a dog and finally, predict the species of the pet.
+We have tried multiple models, to try to classify whether an input image is of a cat or a dog and models to classify into the different breeds of the image provided. Our methods have ranged from simple convolutional neural networks, to an ensemble of CNNs, as well as multiple pre-trained models for image classification. In addition to classifying for the label, we also attempted to work with trimaps of these input images to make bounding boxes for the images to section off the part of the image that is of the face of the cat/dog to make classification further much easier. Upon further fine-tuning of the models, we should be able to find the cat or dog with the bounding boxes, determine whether it is a cat or a dog and finally, predict the breed of the pet.
 
 ### References:
 
