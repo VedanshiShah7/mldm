@@ -36,6 +36,7 @@ The dataset that we used for this project is the [Oxford-IIIT Pet Dataset](https
 ![image](https://user-images.githubusercontent.com/56982656/231655610-7059b3e1-9e17-4263-b563-e2199df854aa.png)
 
 With the following statistics:
+
 ![image](https://user-images.githubusercontent.com/56982656/231655792-e5e1aecc-e2b6-4e68-808b-61f711469e1c.png)
 
 The dataset includes the images of the cats and dogs in a variety of different backgrounds, with varied lighting, and objects interfering with the image. The average size of each image was 500x353 pixels and they were all JPEG format.
@@ -56,6 +57,7 @@ We cleaned the data and characterized the information into a dataframe so we can
 We then split the data into the train, test and validation datasets (train: 60, test: 20 and val: 20).
 
 We then defined the base model - CNN with the following architecture:
+
 <img width="363" alt="Screenshot 2023-04-11 at 5 17 02 PM" src="https://user-images.githubusercontent.com/56982656/231655907-672dc8c9-b18c-4c88-b55d-009897807895.png">
 
 We created the train and validation generator for the images and fit the model using it.
@@ -103,10 +105,12 @@ We computed and ran it locally through the Jupyter notebook in the folder. Howev
 ### Results:
 
 1. This chart shows the different training accuracies and losses for all the models that we trained our dataset on. The MV2 and Exception models perform the best as they provide the highest accuracy most consistently. This is because MobileNetV2 provides higher accuracies through efficient depthwise separable convolutions and other optimization techniques, while Exception Model provides higher accuracies through dynamic routing between capsules, allowing different parts of an image to interact and influence each other.
+
 ![image](https://user-images.githubusercontent.com/56982656/231656039-ca42082c-833d-4efe-bb5a-d5ddfb913890.png)
 ![image](https://user-images.githubusercontent.com/56982656/231656127-4b9bf36e-54b5-4dbb-945f-4519e1d50f1b.png)
 
 2. A few attempts at using bounded boxes to capture the body of a cat/dog
+
 ![image](https://user-images.githubusercontent.com/56982656/231656202-ed432e79-48f9-4e1b-99ca-80f0fccbf8bb.png)
 ![image](https://user-images.githubusercontent.com/56982656/231656274-449be805-2715-4107-a822-cc9c574262a1.png)
 
