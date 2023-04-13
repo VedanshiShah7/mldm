@@ -32,9 +32,16 @@ The key components of our approach are the segmentation model as a base, the thr
 
 The dataset that we used for this project is the [Oxford-IIIT Pet Dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/).
 
+![image](https://user-images.githubusercontent.com/56982656/231655596-7066bfe0-3cb5-4b28-889d-8bb47f7fc3c1.png)
+![image](https://user-images.githubusercontent.com/56982656/231655610-7059b3e1-9e17-4263-b563-e2199df854aa.png)
+
 With the following statistics:
+![image](https://user-images.githubusercontent.com/56982656/231655792-e5e1aecc-e2b6-4e68-808b-61f711469e1c.png)
 
 The dataset includes the images of the cats and dogs in a variety of different backgrounds, with varied lighting, and objects interfering with the image. The average size of each image was 500x353 pixels and they were all JPEG format.
+
+<img width="187" alt="Screenshot 2023-04-11 at 4 52 41 PM" src="https://user-images.githubusercontent.com/56982656/231655682-59e8cfa1-c976-4d0d-8e25-428faee439df.png">
+<img width="167" alt="Screenshot 2023-04-11 at 4 52 33 PM" src="https://user-images.githubusercontent.com/56982656/231655685-38fd0a11-7196-4b40-b7fe-febf863fffd0.png">
 
 _Fig: sample images of the cat and dog in the dataset_
 
@@ -44,9 +51,12 @@ _Fig: sample images of the cat and dog in the dataset_
 
 We cleaned the data and characterized the information into a dataframe so we can analyze and train the data. The data frame includes the image (as an array - tensor), label (cat or dog), breed (one of 37 mentioned above) and the filename.
 
+<img width="714" alt="Screenshot 2023-04-11 at 5 07 45 PM" src="https://user-images.githubusercontent.com/56982656/231655863-8f296620-09d9-4300-a652-3411f859254c.png">
+
 We then split the data into the train, test and validation datasets (train: 60, test: 20 and val: 20).
 
 We then defined the base model - CNN with the following architecture:
+<img width="363" alt="Screenshot 2023-04-11 at 5 17 02 PM" src="https://user-images.githubusercontent.com/56982656/231655907-672dc8c9-b18c-4c88-b55d-009897807895.png">
 
 We created the train and validation generator for the images and fit the model using it.
 
@@ -93,7 +103,13 @@ We computed and ran it locally through the Jupyter notebook in the folder. Howev
 ### Results:
 
 1. This chart shows the different training accuracies and losses for all the models that we trained our dataset on. The MV2 and Exception models perform the best as they provide the highest accuracy most consistently. This is because MobileNetV2 provides higher accuracies through efficient depthwise separable convolutions and other optimization techniques, while Exception Model provides higher accuracies through dynamic routing between capsules, allowing different parts of an image to interact and influence each other.
+![image](https://user-images.githubusercontent.com/56982656/231656039-ca42082c-833d-4efe-bb5a-d5ddfb913890.png)
+![image](https://user-images.githubusercontent.com/56982656/231656127-4b9bf36e-54b5-4dbb-945f-4519e1d50f1b.png)
+
 2. A few attempts at using bounded boxes to capture the body of a cat/dog
+![image](https://user-images.githubusercontent.com/56982656/231656202-ed432e79-48f9-4e1b-99ca-80f0fccbf8bb.png)
+![image](https://user-images.githubusercontent.com/56982656/231656274-449be805-2715-4107-a822-cc9c574262a1.png)
+
 3. One of our parameter choices was to resize all inputs images to (224, 224, 3). We made this choice by looking at other similar models and decided that this image shape seemed to be standard. This also allows a smaller input size, and therefore less parameters which means the models we made were computationally efficient to train and less likely to overfit. We then decided to use the ReLu activation function to introduce some non-linearity in our models so it could handle more complex relationships with data. We determined the filter size of 3x3 in our base CNN model based on what seemed to be standard in other models. We also tried varying the number of filters in each layer to see the impact it would have on our model. The loss function we found most appropriate was the binary cross entropy loss since this was a classification problem with two outcomes.
 
 ### Discussion:
