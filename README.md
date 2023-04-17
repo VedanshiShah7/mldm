@@ -14,6 +14,12 @@ Final project proposal presentation: [here](https://www.canva.com/design/DAFd3gY
 
 A pdf version of the following is also available in the github.
 
+**GitHub organization:**
+
+- pet_segmentation: all the models with the 2 animal classification and 37 breed classification
+- bounding_boxes_segmentation: bounding boxes training jupyter notebook
+- DS 4400 Course Project - Spring 2023: well-written write up
+
 ## **Title:** Pet Dataset Classification and Segmentation
 
 ## Abstract:
@@ -135,7 +141,7 @@ The results of the ensemble model created from three CNNs and the other ensemble
 
 The results of the pretrained model MV2 and Xception model on their own are very good, however, as mentioned before since the ensemble made of these models does very poorly on the testing data, it is likely that these models are overfit and not as accurate as the training and validation accuracy would portray.
 
-The results of the 37 classes of breed prediction was a very difficult problem to solve, especially with the convolutional neural network giving us an accuracy of being in between about 2.5% and about 5%. This makes sense because there are a lot of breeds we could classify into. We additionally tried the classification of the breeds on the pre-trained ResNet model that was trained using the imagenet dataset. The training gave us a similar accuracy of about 3-5%. 
+The results of the 37 classes of breed prediction was a very difficult problem to solve, especially with the convolutional neural network giving us an accuracy of being in between about 2.5% and about 5%. This makes sense because there are a lot of breeds we could classify into. We additionally tried the classification of the breeds on the pre-trained ResNet model that was trained using the imagenet dataset. The training gave us a similar accuracy of about 3-5%.
 
 Additionally, we tried to predict the bounding boxes on the cats and dogs images and found that the bounding box prediction decreases its loss significantly throughout the training however, it does not most accurately predict the boxes as there is fairly little training data for the bounding boxes which leads to overfitting and incorrect learning predictions. However, we only trained it using CNN. We believe that training it over a pre-trained model to predict the bounding boxes may be far more efficient and improve the accuracy of the model.
 
@@ -149,10 +155,10 @@ We have tried multiple models, to try to classify whether an input image is of a
 - https://viso.ai/deep-learning/vision-transformer-vit/
 - https://arxiv.org/abs/2010.11929
 
-
 **Key takeaways:**
+
 - The pre-trained classifiers that we used for our ensemble model performed the best
-have accuracies upwards of 95%
+  have accuracies upwards of 95%
 - Our other models (ResNet, ViT) hovered between 0.60 - 0.70 accuracy
 - Unsure of why the pre-trained models performed so well but the ensemble model didn't have the same accuracy, if not better
 - We were able to classify the images into cats and dogs pretty easily
@@ -162,20 +168,21 @@ have accuracies upwards of 95%
 **Individual work done**
 
 (_We all worked on the write up._)
+
 - Vedanshi:
-   - CNN for 2 breeds (along with Vedant and Sid)
-   - Bouding box prediction
-   - ResNet model with 3 types of models trained with ImageNet
-   - CNN for 37 breeds of cats and dogs
-   - ResNet model for the cats and dogs
-   - Final project presentation (along with Sid)
-   - Cleaning up the data and models
+  - CNN for 2 breeds (along with Vedant and Sid)
+  - Bouding box prediction
+  - ResNet model with 3 types of models trained with ImageNet
+  - CNN for 37 breeds of cats and dogs
+  - ResNet model for the cats and dogs
+  - Final project presentation (along with Sid)
+  - Cleaning up the data and models
 - Vedant:
-   - CNN for 2 breeds (along with Vedanshi and Sid)
-   - Ensemble models with CNNs
-   - Ensemble models with multiple-pre-trained models
+  - CNN for 2 breeds (along with Vedanshi and Sid)
+  - Ensemble models with CNNs
+  - Ensemble models with multiple-pre-trained models
 - Sid:
-   - presentation
-   - CNN for 2 breeds (along with Vedanshi and Vedant)
-   - Vision Transformer
-   - Final project presentation (along with Vedanshi)
+  - presentation
+  - CNN for 2 breeds (along with Vedanshi and Vedant)
+  - Vision Transformer
+  - Final project presentation (along with Vedanshi)
