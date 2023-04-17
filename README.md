@@ -160,7 +160,8 @@ have accuracies upwards of 95%
 - We were able to predict the bounding boxes for the cats and dogs if only a little poorly
 
 **Individual work done**
-_We all worked on the write up._
+
+(_We all worked on the write up._)
 - Vedanshi:
    - CNN for 2 breeds (along with Vedant and Sid)
    - Bouding box prediction
