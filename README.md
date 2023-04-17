@@ -8,6 +8,12 @@ Final project for machine learning and data mining
 - Vedant Bhagat
 - Sid Mallareddygari
 
+Final project presentation: [here](https://www.canva.com/design/DAFfGMpFOH4/hOffefxiWzMY1oFSRN67uA/edit?utm_content=DAFfGMpFOH4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+Final project proposal presentation: [here](https://www.canva.com/design/DAFd3gYxx48/vUWV_t2ObbldzB7A1JCsnw/edit?utm_content=DAFd3gYxx48&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+A pdf version of the following is also available in the github.
+
 ## **Title:** Pet Dataset Classification and Segmentation
 
 ## Abstract:
@@ -142,3 +148,33 @@ We have tried multiple models, to try to classify whether an input image is of a
 - https://medium.com/@alexppppp/how-to-train-an-ensemble-of-convolutional-neural-networks-for-image-classification-8fc69b087d3
 - https://viso.ai/deep-learning/vision-transformer-vit/
 - https://arxiv.org/abs/2010.11929
+
+
+**Key takeaways:**
+- The pre-trained classifiers that we used for our ensemble model performed the best
+have accuracies upwards of 95%
+- Our other models (ResNet, ViT) hovered between 0.60 - 0.70 accuracy
+- Unsure of why the pre-trained models performed so well but the ensemble model didn't have the same accuracy, if not better
+- We were able to classify the images into cats and dogs pretty easily
+- Classifying the images into the breeds was a much much more difficult problem and got an accuracy of about 5% only
+- We were able to predict the bounding boxes for the cats and dogs if only a little poorly
+
+**Individual work done**
+_We all worked on the write up._
+- Vedanshi:
+   - CNN for 2 breeds (along with Vedant and Sid)
+   - Bouding box prediction
+   - ResNet model with 3 types of models trained with ImageNet
+   - CNN for 37 breeds of cats and dogs
+   - ResNet model for the cats and dogs
+   - Final project presentation (along with Sid)
+   - Cleaning up the data and models
+- Vedant:
+   - CNN for 2 breeds (along with Vedanshi and Sid)
+   - Ensemble models with CNNs
+   - Ensemble models with multiple-pre-trained models
+- Sid:
+   - presentation
+   - CNN for 2 breeds (along with Vedanshi and Vedant)
+   - Vision Transformer
+   - Final project presentation (along with Vedanshi)
